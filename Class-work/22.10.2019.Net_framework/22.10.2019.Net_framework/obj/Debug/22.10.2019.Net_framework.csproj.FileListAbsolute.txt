@@ -1,0 +1,9 @@
+E:\Windows_Forms\Class-work\22.10.2019.Net_framework\22.10.2019.Net_framework\bin\Debug\22.10.2019.Net_framework.exe.config
+E:\Windows_Forms\Class-work\22.10.2019.Net_framework\22.10.2019.Net_framework\bin\Debug\22.10.2019.Net_framework.exe
+E:\Windows_Forms\Class-work\22.10.2019.Net_framework\22.10.2019.Net_framework\bin\Debug\22.10.2019.Net_framework.pdb
+E:\Windows_Forms\Class-work\22.10.2019.Net_framework\22.10.2019.Net_framework\obj\Debug\22.10.2019.Net_framework.csprojAssemblyReference.cache
+E:\Windows_Forms\Class-work\22.10.2019.Net_framework\22.10.2019.Net_framework\obj\Debug\_22._10._2019.Net_framework.Form1.resources
+E:\Windows_Forms\Class-work\22.10.2019.Net_framework\22.10.2019.Net_framework\obj\Debug\_22._10._2019.Net_framework.Properties.Resources.resources
+E:\Windows_Forms\Class-work\22.10.2019.Net_framework\22.10.2019.Net_framework\obj\Debug\22.10.2019.Net_framework.csproj.GenerateResource.cache
+E:\Windows_Forms\Class-work\22.10.2019.Net_framework\22.10.2019.Net_framework\obj\Debug\22.10.2019.Net_framework.exe
+E:\Windows_Forms\Class-work\22.10.2019.Net_framework\22.10.2019.Net_framework\obj\Debug\22.10.2019.Net_framework.pdb

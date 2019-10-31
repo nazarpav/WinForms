@@ -1,0 +1,11 @@
+E:\Windows_Forms\Class-work\22.10.2019\22.10.2019\bin\Debug\netcoreapp3.0\22.10.2019.exe
+E:\Windows_Forms\Class-work\22.10.2019\22.10.2019\bin\Debug\netcoreapp3.0\22.10.2019.deps.json
+E:\Windows_Forms\Class-work\22.10.2019\22.10.2019\bin\Debug\netcoreapp3.0\22.10.2019.runtimeconfig.json
+E:\Windows_Forms\Class-work\22.10.2019\22.10.2019\bin\Debug\netcoreapp3.0\22.10.2019.runtimeconfig.dev.json
+E:\Windows_Forms\Class-work\22.10.2019\22.10.2019\bin\Debug\netcoreapp3.0\22.10.2019.dll
+E:\Windows_Forms\Class-work\22.10.2019\22.10.2019\bin\Debug\netcoreapp3.0\22.10.2019.pdb
+E:\Windows_Forms\Class-work\22.10.2019\22.10.2019\obj\Debug\netcoreapp3.0\22.10.2019.csprojAssemblyReference.cache
+E:\Windows_Forms\Class-work\22.10.2019\22.10.2019\obj\Debug\netcoreapp3.0\22.10.2019.AssemblyInfoInputs.cache
+E:\Windows_Forms\Class-work\22.10.2019\22.10.2019\obj\Debug\netcoreapp3.0\22.10.2019.AssemblyInfo.cs
+E:\Windows_Forms\Class-work\22.10.2019\22.10.2019\obj\Debug\netcoreapp3.0\22.10.2019.dll
+E:\Windows_Forms\Class-work\22.10.2019\22.10.2019\obj\Debug\netcoreapp3.0\22.10.2019.pdb
