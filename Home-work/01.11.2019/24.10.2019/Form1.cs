@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
+using System.Runtime.Serialization.Formatters.Binary;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -13,11 +15,10 @@ namespace _24._10._2019
     public partial class Form1 : Form
     {
 
-        Student student;
+        BinaryFormatter binFormat = new BinaryFormatter();
         public Form1()
         {
             InitializeComponent();
-            student = new Student();
         }
 
         private void checkedListBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -32,29 +33,48 @@ namespace _24._10._2019
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string buf = string.Empty;
-            foreach (var i in checkedListBox1.CheckedItems)
-            {
-                buf += "\n"+i.ToString();
-            }
-            student.Name = textBox1.Text;
-            student.Surname = textBox2.Text;
-            student.ResidenceAddress = textBox3.Text;
-            student.DateOfBirth = dateTimePicker1.Value;
-            student.IsMale = radioButton1.Checked;
-            student.Tehnologies = buf;
+            Student studentTmp = new Student();
 
-            MessageBox.Show(student.ToString());
+            studentTmp.Name = textBox1.Text;
+            studentTmp.Surname = textBox2.Text;
+            studentTmp.ResidenceAddress = textBox3.Text;
+            studentTmp.DateOfBirth = dateTimePicker1.Value;
+            studentTmp.IsMale = radioButton1.Checked;
+            studentTmp.Tehnologies = checkedListBox1.Text;
+
+            MessageBox.Show(studentTmp.ToString());
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
+            Student studentTmp = new Student();
 
+            studentTmp.Name = textBox1.Text;
+            studentTmp.Surname = textBox2.Text;
+            studentTmp.ResidenceAddress = textBox3.Text;
+            studentTmp.DateOfBirth = dateTimePicker1.Value;
+            studentTmp.IsMale = radioButton1.Checked;
+            studentTmp.Tehnologies = checkedListBox1.Text;
+            using (Stream fStream = File.Create("test.bin"))
+            {
+                binFormat.Serialize(fStream, studentTmp);
+            }
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
-
+            Student studentTmp = new Student();
+            using (Stream fStream = File.OpenRead("test.bin"))
+            {
+                studentTmp = (Student) binFormat.Deserialize(fStream);
+            }
+            textBox1.Text = studentTmp.Name;
+            textBox2.Text= studentTmp.Surname;
+            textBox3.Text = studentTmp.ResidenceAddress;
+            dateTimePicker1.Value = studentTmp.DateOfBirth;
+            radioButton1.Checked = studentTmp.IsMale;
+            radioButton2.Checked = !studentTmp.IsMale;
+            checkedListBox1.Text = studentTmp.Tehnologies;
         }
     }
 }

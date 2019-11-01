@@ -192,6 +192,7 @@
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(128, 20);
             this.dateTimePicker1.TabIndex = 12;
+            this.dateTimePicker1.Value = new System.DateTime(2019, 11, 2, 0, 4, 53, 0);
             // 
             // label2
             // 
