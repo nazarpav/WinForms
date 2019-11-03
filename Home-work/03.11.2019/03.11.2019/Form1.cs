@@ -71,11 +71,13 @@ namespace _03._11._2019
         private void button1_Click(object sender, EventArgs e)
         {
             int AllPrice = 0;
+            string buf = "";
             foreach (var i in groupBox1.Controls)
             {
                 if (((RadioButton)i).Checked)
                 {
                     AllPrice += int.Parse(((RadioButton)i).Text.ToString()[((RadioButton)i).Text.Length - 1].ToString());
+                    buf += ((RadioButton)i).Text+ "|";
                     break;
                 }
             }
@@ -84,6 +86,7 @@ namespace _03._11._2019
                 if (((RadioButton)i).Checked)
                 {
                     AllPrice += int.Parse(((RadioButton)i).Text.ToString()[((RadioButton)i).Text.Length - 1].ToString());
+                    buf += ((RadioButton)i).Text + "|";
                     break;
                 }
             }
@@ -92,10 +95,12 @@ namespace _03._11._2019
                 if (((RadioButton)i).Checked)
                 {
                     AllPrice += int.Parse(((RadioButton)i).Text.ToString()[((RadioButton)i).Text.Length - 1].ToString());
+                    buf += ((RadioButton)i).Text;
                     break;
                 }
             }
             MessageBox.Show("All Price = "+AllPrice);
+            listBox1.Items.Add(buf+"\n Price => "+ AllPrice+"\n Time => "+DateTime.Now);
         }
     }
 }
