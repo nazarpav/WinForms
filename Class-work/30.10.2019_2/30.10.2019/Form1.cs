@@ -19,7 +19,7 @@ namespace _30._10._2019
             InitializeComponent();
             toolStripLabelquantitychar.Text = textBox1.Text.Length.ToString() + " / " + numericUpDown1.Maximum + " Symbols";
             textBox1.MaxLength = (int)numericUpDown1.Value;
-            textBox1.BackColor = Color.GreenYellow;
+            textBox1.BackColor = Color.Green;
             this.BackColor = textBox1.BackColor;
             numericUpDown1.BackColor = textBox1.BackColor;
         }

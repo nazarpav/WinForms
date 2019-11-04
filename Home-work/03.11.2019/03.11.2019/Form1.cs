@@ -102,5 +102,6 @@ namespace _03._11._2019
             MessageBox.Show("All Price = "+AllPrice);
             listBox1.Items.Add(buf+"\n Price => "+ AllPrice+"\n Time => "+DateTime.Now);
         }
+
     }
 }

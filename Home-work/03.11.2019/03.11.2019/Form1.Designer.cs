@@ -212,8 +212,8 @@
             this.radioButton11.Name = "radioButton11";
             this.radioButton11.Size = new System.Drawing.Size(87, 17);
             this.radioButton11.TabIndex = 0;
-            this.radioButton11.TabStop = true;
             this.radioButton11.Text = "Десерт3 = 7";
+            this.radioButton11.UseMnemonic = false;
             this.radioButton11.UseVisualStyleBackColor = true;
             // 
             // radioButton12
@@ -282,7 +282,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(984, 450);
+            this.ClientSize = new System.Drawing.Size(990, 262);
             this.Controls.Add(this.listBox1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.groupBox3);
