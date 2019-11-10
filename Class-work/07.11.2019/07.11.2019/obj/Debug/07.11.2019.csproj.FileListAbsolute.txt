@@ -1,0 +1,9 @@
+E:\Windows_Forms\Class-work\07.11.2019\07.11.2019\bin\Debug\07.11.2019.exe.config
+E:\Windows_Forms\Class-work\07.11.2019\07.11.2019\bin\Debug\07.11.2019.exe
+E:\Windows_Forms\Class-work\07.11.2019\07.11.2019\bin\Debug\07.11.2019.pdb
+E:\Windows_Forms\Class-work\07.11.2019\07.11.2019\obj\Debug\07.11.2019.csprojAssemblyReference.cache
+E:\Windows_Forms\Class-work\07.11.2019\07.11.2019\obj\Debug\_07._11._2019.Form1.resources
+E:\Windows_Forms\Class-work\07.11.2019\07.11.2019\obj\Debug\_07._11._2019.Properties.Resources.resources
+E:\Windows_Forms\Class-work\07.11.2019\07.11.2019\obj\Debug\07.11.2019.csproj.GenerateResource.cache
+E:\Windows_Forms\Class-work\07.11.2019\07.11.2019\obj\Debug\07.11.2019.exe
+E:\Windows_Forms\Class-work\07.11.2019\07.11.2019\obj\Debug\07.11.2019.pdb
