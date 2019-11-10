@@ -12,10 +12,11 @@ namespace _10._11._2019
 {
     public partial class Form1 : Form
     {
+        Dictionary<string, Product> List;
         Form2 Form2;
         public Form1()
         {
-            Form2 = new Form2();
+            List = new Dictionary<string, Product>();
             InitializeComponent();
         }
 
@@ -36,13 +37,8 @@ namespace _10._11._2019
 
         private void button3_Click(object sender, EventArgs e)
         {
-            Form2 = new Form2();
+            //Form2 = new Form2(List[listBox1.SelectedItem.ToString()]);
             Form2.Show();
-            while (Form2.)
-            {
-
-            }
-
         }
     }
 }

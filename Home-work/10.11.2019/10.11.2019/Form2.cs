@@ -12,8 +12,10 @@ namespace _10._11._2019
 {
     public partial class Form2 : Form
     {
-        public Form2(ListBox list)
+        Product product;
+        public Form2(ref Product product)
         {
+            this.product = product;
             InitializeComponent();
         }
 
@@ -29,7 +31,14 @@ namespace _10._11._2019
 
         private void button2_Click(object sender, EventArgs e)
         {
+
             this.Close();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+
         }
     }
 }
