@@ -7,3 +7,4 @@ E:\Windows_Forms\Home-work\10.11.2019\10.11.2019\obj\Debug\_10._11._2019.Propert
 E:\Windows_Forms\Home-work\10.11.2019\10.11.2019\obj\Debug\10.11.2019.csproj.GenerateResource.cache
 E:\Windows_Forms\Home-work\10.11.2019\10.11.2019\obj\Debug\10.11.2019.exe
 E:\Windows_Forms\Home-work\10.11.2019\10.11.2019\obj\Debug\10.11.2019.pdb
+E:\Windows_Forms\Home-work\10.11.2019\10.11.2019\obj\Debug\_10._11._2019.Form2.resources

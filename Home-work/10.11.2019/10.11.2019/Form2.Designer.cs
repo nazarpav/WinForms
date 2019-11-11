@@ -69,7 +69,6 @@
             this.numericUpDown1.Name = "numericUpDown1";
             this.numericUpDown1.Size = new System.Drawing.Size(170, 20);
             this.numericUpDown1.TabIndex = 2;
-            this.numericUpDown1.ValueChanged += new System.EventHandler(this.numericUpDown1_ValueChanged);
             // 
             // numericUpDown2
             // 
@@ -134,7 +133,6 @@
             this.label3.Size = new System.Drawing.Size(84, 20);
             this.label3.TabIndex = 5;
             this.label3.Text = "Quantity  : ";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label4
             // 
@@ -155,7 +153,6 @@
             this.label5.Size = new System.Drawing.Size(80, 20);
             this.label5.TabIndex = 5;
             this.label5.Text = "Country  : ";
-            this.label5.Click += new System.EventHandler(this.label3_Click);
             // 
             // label6
             // 
@@ -166,7 +163,6 @@
             this.label6.Size = new System.Drawing.Size(88, 20);
             this.label6.TabIndex = 5;
             this.label6.Text = "Discount  : ";
-            this.label6.Click += new System.EventHandler(this.label3_Click);
             // 
             // Form2
             // 
