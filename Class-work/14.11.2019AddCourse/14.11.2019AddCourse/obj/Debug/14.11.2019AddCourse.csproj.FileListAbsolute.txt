@@ -1,0 +1,9 @@
+E:\Windows_Forms\Class-work\14.11.2019AddCourse\14.11.2019AddCourse\bin\Debug\14.11.2019AddCourse.exe.config
+E:\Windows_Forms\Class-work\14.11.2019AddCourse\14.11.2019AddCourse\bin\Debug\14.11.2019AddCourse.exe
+E:\Windows_Forms\Class-work\14.11.2019AddCourse\14.11.2019AddCourse\bin\Debug\14.11.2019AddCourse.pdb
+E:\Windows_Forms\Class-work\14.11.2019AddCourse\14.11.2019AddCourse\obj\Debug\14.11.2019AddCourse.csprojAssemblyReference.cache
+E:\Windows_Forms\Class-work\14.11.2019AddCourse\14.11.2019AddCourse\obj\Debug\_14._11._2019AddCourse.Form1.resources
+E:\Windows_Forms\Class-work\14.11.2019AddCourse\14.11.2019AddCourse\obj\Debug\_14._11._2019AddCourse.Properties.Resources.resources
+E:\Windows_Forms\Class-work\14.11.2019AddCourse\14.11.2019AddCourse\obj\Debug\14.11.2019AddCourse.csproj.GenerateResource.cache
+E:\Windows_Forms\Class-work\14.11.2019AddCourse\14.11.2019AddCourse\obj\Debug\14.11.2019AddCourse.exe
+E:\Windows_Forms\Class-work\14.11.2019AddCourse\14.11.2019AddCourse\obj\Debug\14.11.2019AddCourse.pdb
