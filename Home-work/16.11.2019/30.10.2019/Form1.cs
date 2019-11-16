@@ -61,10 +61,10 @@ namespace _30._10._2019
             tp.Text = "Tab "+ tabControl1.TabPages.Count;
             tb.MaxLength = int.MaxValue;
             tb.ContextMenuStrip = contextMenuStrip1;
-            tb.AllowDrop = true;
             tb.DragEnter += tabControl1_DragEnter;
-             tb.EnableAutoDragDrop = true;
             tb.DragDrop += tabControl1_DragDrop;
+            tb.AllowDrop = true;
+            //tb.EnableAutoDragDrop = true;
             return tp;
         }
         private void TextChanged_(object sender, EventArgs e)
@@ -183,17 +183,31 @@ namespace _30._10._2019
 
         private void tabControl1_DragDrop(object sender, DragEventArgs e)
         {
-            string v = e.Data.GetData(DataFormats.Text, true).ToString();
-            getTB(). Text = e.Data.GetData(DataFormats.Rtf,true).ToString();
+            switch (MessageBox.Show("Open new Tab?", "_", MessageBoxButtons.YesNo))
+            {
+                case DialogResult.Yes:
+                    tabControl1.SelectedTab = addNewTab();
+                    Update_();
+                    break;
+                case DialogResult.No:
+                    break;
+                case DialogResult.Cancel:
+                    return;
+            }
+            var data = e.Data.GetData(DataFormats.FileDrop);
+            if(data != null)
+            {
+                var fileNames = data as string[];
+                getTB().LoadFile(fileNames[0]);
+            }
         }
 
         private void tabControl1_DragEnter(object sender, DragEventArgs e)
         {
-            e.Effect = DragDropEffects.Copy;
-            //if (e.Data.GetDataPresent(DataFormats.Text,true))
-            //    e.Effect = DragDropEffects.Copy;
-            //else
-               // e.Effect = DragDropEffects.All;
+            if (e.Data.GetDataPresent(DataFormats.Text))
+                e.Effect = DragDropEffects.Copy;
+            else
+                e.Effect = DragDropEffects.All;
         }
     }
 }
