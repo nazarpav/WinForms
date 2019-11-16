@@ -95,7 +95,7 @@ namespace _30._10._2019
             }
             OpenFileDialog open = new OpenFileDialog();
            //open.Filter = @"All Files(*.*)|*.*|Text Files(*.rtf)|*.rtf||";
-            open.FilterIndex = 1;
+            //open.FilterIndex = 1;
             if (open.ShowDialog() == DialogResult.OK)
             {
                 if (!(pathList.ContainsKey(tabControl1.SelectedIndex)))
