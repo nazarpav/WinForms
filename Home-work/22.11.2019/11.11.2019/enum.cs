@@ -11,6 +11,8 @@ namespace _11._11._2019
         Point = 0,
         Line,
         Rect,
+        Image,
         Ellipse
     }
+    
 }
