@@ -14,25 +14,27 @@ namespace _14._11._2019AddCourse
 {
     public partial class Form1 : Form
     {
-        int num = 0;
         uint time = 0;
         List<string> text;
         int count=0;
         int countAlpha=0;
         char key;
         int countError = 0;
-        public void Count(object obj)
-        {
-            toolStripStatusLabel2.Text=(int.Parse(toolStripStatusLabel2.Text)+1).ToString();
-        }
         public Form1()
         {
             InitializeComponent();
-            TimerCallback tm = new TimerCallback(Count);
-            System.Threading.Timer timer = new System.Threading.Timer(tm, num, 0, 1000);
             KeyPress += KeyPress_;
+            timer1.Interval = 1000;
+            timer1.Tick += Timer1_Tick;
+            textBox1.Enabled = false;
+
         }
 
+        private void Timer1_Tick(object sender, EventArgs e)
+        {
+            ++time;
+            toolStripStatusLabel2.Text = time.ToString();
+        }
 
         private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
         {
@@ -41,12 +43,19 @@ namespace _14._11._2019AddCourse
 
         private void button1_Click(object sender, EventArgs e)
         {
-            using (StreamReader reader = File.OpenText("text.txt"))
-            {
-                text = reader.ReadToEnd().Split('.').ToList();
-            }
+            textBox1.Enabled = false;
+            count = 0;
+            timer1.Stop();
+            time = 0;
+            textBox1.Text = String.Empty;
+            MessageBox.Show("GO GO GO!!1");
+            StreamReader reader = File.OpenText("text.txt");
+            text = reader.ReadToEnd().Split('.').ToList();
             toolStripStatusLabel2.Text = "0";
-            label2.Text = text[count++];
+            toolStripStatusLabel5.Text = "0";
+            label2.Text = text[count];
+            timer1.Start();
+            textBox1.Enabled = true;
         }
 
         private void KeyPress_(object sender, KeyPressEventArgs e)
@@ -55,40 +64,42 @@ namespace _14._11._2019AddCourse
         }
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            toolStripProgressBar1.Maximum = text[count].Length;
-            if (textBox1.Text==label2.Text)
+            if(count==text.Count-1|| textBox1.Enabled == false)
             {
-                toolStripStatusLabel2.Text = "0";
-                countAlpha = 0;
-                textBox1.Text = "";
-                toolStripProgressBar1.Value = countAlpha;
-                label2.Text = text[count++];
+                MessageBox.Show("Time = "+time+"Mistakes = "+countError);
+                toolStripStatusLabel2.Text = String.Empty;
+                toolStripStatusLabel5.Text = String.Empty;
+                textBox1.Clear();
+                timer1.Stop();
+                textBox1.Enabled = false;
+                return;
+            }
+            if(textBox1.Text == label2.Text)
+            {
+                label2.Text = text[++count];
+                textBox1.Clear();
+            }
+            if (textBox1.Enabled && label2.Text.Remove(textBox1.Text.Length) == textBox1.Text)
+            {
+                label2.BackColor = Color.Turquoise;
+            }
+            else if(label2.BackColor != Color.Red)
+            {
+                label2.BackColor = Color.Red;
+                toolStripStatusLabel5.Text= countError.ToString();
+                ++countError;
             }
             if (key == 8)
             {
                 if (countAlpha != toolStripProgressBar1.Maximum && countAlpha != toolStripProgressBar1.Minimum)
                     countAlpha--;
                 toolStripProgressBar1.Value = countAlpha;
-            }
-            else
-            {
-                if (countAlpha != toolStripProgressBar1.Maximum && countAlpha != toolStripProgressBar1.Minimum)
-                    countAlpha++;
-                toolStripProgressBar1.Value = countAlpha;
-            }
-            //if(textBox1.Text[textBox1.Text.Length ] != label2.Text[textBox1.Text.Length-1]&& textBox1.Text[textBox1.Text.Length-1] >0&& label2.Text[textBox1.Text.Length-1] > 0)
-            //{
-            //    label2.BackColor = Color.Red;
-            //    toolStripStatusLabel5.Text = (countError+1).ToString();
-            //}
-            //else
-            //{
-                label2.BackColor = Color.White;
-            
+            } 
         }
 
         private void toolStripProgressBar1_Click(object sender, EventArgs e)
         {
         }
+
     }
 }
